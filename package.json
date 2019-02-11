@@ -1,0 +1,24 @@
+{
+  "name": "js-video-pan-responder",
+  "version": "0.1.0",
+  "description": "gestures serving video",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinXu0223/react-native-video-panResponder.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "panresponder"
+  ],
+  "author": "Justin Xu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustinXu0223/react-native-video-panResponder/issues"
+  },
+  "homepage": "https://github.com/JustinXu0223/react-native-video-panResponder#readme"
+}
