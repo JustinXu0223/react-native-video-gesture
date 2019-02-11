@@ -26,23 +26,27 @@ export function handleDirection(gestureState, deviceWidth = getScreenWidth()) {
   if (resMoveX > resMoveY) {
     return ({
       moveX,
-      moveY: 0,
+      moveY,
       direction: moveX > 0 ? DIRECTION_ROW : DIRECTION_ROW_REVERSE,
     });
   }
   // 纵向逻辑
   const location = (deviceWidth / 2) - gestureState.x0;
   return ({
-    moveX: 0,
+    moveX,
     moveY,
     location: location > 0 ? LOCATION_LEFT : LOCATION_RIGHT,
     direction: moveY < 0 ? DIRECTION_COLUMN : DIRECTION_COLUMN_REVERSE,
   });
 }
 
-// 获取移动中真实方向, (开始是横向, 移动变为纵向不计入)
+// 获取移动中真实方向
 export function getRealDirection(currMap, prevMap) {
   if (!prevMap.direction) return currMap;
   if (currMap.direction.slice(0, 14) === prevMap.direction.slice(0, 14)) return currMap;
-  return prevMap;
+  return {
+    ...prevMap,
+    moveX: currMap.moveX,
+    moveY: currMap.moveY,
+  };
 }

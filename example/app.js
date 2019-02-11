@@ -30,19 +30,30 @@ const styles = StyleSheet.create({
     height: 400,
     borderWidth: 1,
     borderColor: 'red',
+    overflow: 'hidden',
   },
 });
 
-
 class App extends React.Component {
+  state = {
+    moveData: null,
+    endData: null,
+    eventName: null,
+  };
   render() {
+    const {
+      state: {
+        moveData,
+        endData,
+        eventName,
+      },
+    } = this;
     const myPanResponderProps = {
-      onStart: data => console.log('@onStart', data),
-      onMove: data => console.log('@onMove', data),
-      onEnd: data => console.log('@onEnd', data),
-      onPress: () => console.log('onPress'),
-      onLongPress: () => console.log('onLongPress'),
-      onDoublePress: () => console.log('onDoublePress'),
+      onMove: data => this.setState({ moveData: data }),
+      onEnd: data => this.setState({ endData: data }),
+      onPress: () => this.setState({ eventName: 'onPress' }),
+      onLongPress: () => this.setState({ eventName: 'onLongPress' }),
+      onDoublePress: () => this.setState({ eventName: 'onDoublePress' }),
     };
     return (
       <View style={styles.container}>
@@ -50,7 +61,9 @@ class App extends React.Component {
         <View style={styles.wrapper}>
           <RNGesture {...myPanResponderProps} />
         </View>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>moveData: {JSON.stringify(moveData)}</Text>
+        <Text style={styles.instructions}>endData: {JSON.stringify(endData)}</Text>
+        <Text style={styles.instructions}>eventName: {eventName}</Text>
       </View>
     );
   }

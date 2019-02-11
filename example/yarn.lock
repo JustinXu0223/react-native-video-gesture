@@ -3559,10 +3559,10 @@ jest@24.1.0:
     import-local "^2.0.0"
     jest-cli "^24.1.0"
 
-js-react-native-gesture@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/js-react-native-gesture/-/js-react-native-gesture-0.1.3.tgz#876c8387ce3fef73016488a20571f725eb17565a"
-  integrity sha512-Y1uJnuUN8yirODDd7GqTXVIueg6tBtCvRc3yWMl2W1XWQJpF9w9Ktpj05x5ClGra5mnpCfn5iBCa/1Hl1PB2Cw==
+js-react-native-gesture@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/js-react-native-gesture/-/js-react-native-gesture-0.1.5.tgz#f750bb2fa3778b186765d407ebcbda17f4b5f677"
+  integrity sha512-1czkVFpPNxVn/obhhMxDGwve2FexezkyBkjqoZ8j5QT2uP2eL/LeP+hTOUSnIJK53Yc8m48XEUmprZk/NQ7JPw==
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"

@@ -28,10 +28,6 @@ The style of View.
 
 React children node
 
-#### `onStart:({ moveX: number, moveY: number, location: string, direction: string }) => null`
-
-onPanResponderGrant callback func
-
 #### `onMove:({ moveX: number, moveY: number, location: string, direction: string }) => null`
 
 onPanResponderMove callback func
@@ -71,7 +67,7 @@ onDoublePress func.
 
 ## Example code
 `
->1). $ example/src/App.js
+>1). $ example/src/app.js
 `
 
 ## Start
