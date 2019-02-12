@@ -48,7 +48,7 @@ class App extends React.Component {
         eventName,
       },
     } = this;
-    const myPanResponderProps = {
+    const rNGestureProps = {
       onMove: data => this.setState({ moveData: data }),
       onEnd: data => this.setState({ endData: data }),
       onPress: () => this.setState({ eventName: 'onPress' }),
@@ -59,7 +59,7 @@ class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <View style={styles.wrapper}>
-          <RNGesture {...myPanResponderProps} />
+          <RNGesture {...rNGestureProps} />
         </View>
         <Text style={styles.instructions}>moveData: {JSON.stringify(moveData)}</Text>
         <Text style={styles.instructions}>endData: {JSON.stringify(endData)}</Text>
