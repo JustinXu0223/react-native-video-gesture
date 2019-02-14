@@ -135,7 +135,7 @@ class MyPanResponder extends React.PureComponent {
           const isEvent = getMoveDistance(gestureState) < (pressDistance || 0);
           if (isEvent) {
             this.singlePressTimeout = setTimeout(() => {
-              onPress && onPress(e.nativeEvent);
+              onPress && onPress();
             }, singlePressTime);
             return;
           }
